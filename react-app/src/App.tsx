@@ -1,12 +1,14 @@
-import Alert from "./components/Alert";
-import ListGroup from "./components/ListGroup";
+import Button from "./components/Button";
+
+let btnTxt = "My Button";
+let color: string = "secondary";
+
+let printMessage = () => {
+  console.log("You clicked a button!");
+};
 
 function App() {
-  return (
-    <Alert>
-      Hello <h2>World</h2>
-    </Alert>
-  );
+  return <Button btnTxt={btnTxt} onHandleClick={printMessage} color={color} />;
 }
 
 export default App;
