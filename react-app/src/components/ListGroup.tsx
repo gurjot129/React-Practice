@@ -1,10 +1,12 @@
 import { useState } from "react";
 
-//this represents the ListGroup component
-function ListGroup() {
-  //list of places
-  let items = ["New York", "San Francisco", "Tokyo", "London", "Paris"];
+interface ListGroupProps {
+  items: string[];
+  heading: string;
+}
 
+//this represents the ListGroup component
+function ListGroup({ items, heading }: ListGroupProps) {
   //Hook
   const [selectedIndex, setSelectedIndex] = useState(-1);
 
@@ -14,7 +16,7 @@ function ListGroup() {
 
   return (
     <>
-      <h1>List</h1>
+      <h1>{heading}</h1>
 
       {getMessage()}
 
