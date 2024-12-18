@@ -1,17 +1,13 @@
 interface Props {
   btnTxt: string;
-  onHandleClick: () => void;
+  OnClick: () => void;
   color?: "primary" | "secondary" | "danger" | "success";
 }
 
-function Button({ btnTxt, onHandleClick, color }: Props) {
+function Button({ btnTxt, OnClick, color }: Props) {
   return (
     <>
-      <button
-        type="button"
-        className={"btn btn-" + color}
-        onClick={onHandleClick}
-      >
+      <button type="button" className={"btn btn-" + color} onClick={OnClick}>
         {btnTxt}
       </button>
     </>
